@@ -23,3 +23,12 @@ basic.forever(function () {
     radio.sendValue("M1Bearing", input.compassHeading())
     basic.pause(500)
 })
+
+basic.forever(function () {
+    if (foundBy == "M2" || foundBy == "M3") {
+        basic.showIcon(IconNames.Yes)
+    } else {
+        basic.clearScreen()
+    }
+    basic.pause(500)
+})
